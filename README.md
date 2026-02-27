@@ -1,48 +1,51 @@
 # FIR
 
-Welcome to **FIR**. This repository is currently a minimal starter repository intended to be shaped into a real project.
+FIR is currently a **bootstrap repository**: it has Git history and onboarding docs, but no application source code yet.
 
-## Current status
+This README is the fast path for new contributors.
 
-At the moment, this codebase only contains Git metadata and placeholder files. There is no production code yet.
+## Current repository shape
 
-That is normal for a bootstrapping phase: you can use this repository as the foundation for your architecture, development workflow, and team conventions.
+Today, the repository intentionally contains only foundational documentation:
 
-## What a newcomer should know first
+- `README.md` (this file)
+- `docs/ONBOARDING.md` (deeper contributor onboarding)
 
-1. **You are looking at a scaffold, not a mature app.**
-   - There is no `src/` folder, test suite, CI workflow, or framework wiring yet.
-2. **Early decisions will define team velocity.**
-   - The first files you add (project layout, linting, testing, docs) become the template for future work.
-3. **Documentation-first onboarding is recommended.**
-   - Set expectations now to make future contributors productive quickly.
+No `src/`, `tests/`, or CI workflow has been introduced yet.
 
-## Suggested baseline structure
+## What this means for newcomers
 
-If you are starting from scratch, this structure works well for many stacks:
+- You are not inheriting a legacy architecture yet.
+- Your early contributions will define project conventions.
+- Documentation and guardrails should come before large feature work.
+
+## Recommended first contributions (in order)
+
+1. **Pick the implementation stack**
+   - Language/runtime and version policy.
+2. **Create a minimal runnable slice**
+   - A tiny feature proving local run + test loop.
+3. **Establish quality guardrails**
+   - Formatter, linter, and baseline test command.
+4. **Add CI for the baseline checks**
+   - Run formatting/lint/tests on each PR.
+5. **Document contribution workflow**
+   - Add `CONTRIBUTING.md` and architecture notes.
+
+## Suggested target layout
 
 ```text
 FIR/
 ├── README.md
+├── CONTRIBUTING.md
 ├── docs/
 │   ├── ONBOARDING.md
 │   └── architecture.md
 ├── src/
 ├── tests/
-├── .editorconfig
-├── .gitignore
-├── CONTRIBUTING.md
-└── <language/tooling config files>
+└── <tooling and CI config>
 ```
 
-## Suggested first milestones
+## Next read
 
-1. **Decide stack** (language/framework/runtime).
-2. **Create a tiny vertical slice** (a single runnable feature).
-3. **Add quality guardrails** (formatter, linter, tests).
-4. **Automate checks in CI**.
-5. **Document how to run, test, and contribute**.
-
-## Onboarding guide
-
-For a more detailed newcomer walkthrough, see [`docs/ONBOARDING.md`](docs/ONBOARDING.md).
+Continue with the full onboarding guide: **[`docs/ONBOARDING.md`](docs/ONBOARDING.md)**.

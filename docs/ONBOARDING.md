@@ -1,89 +1,81 @@
 # FIR Onboarding Guide
 
-This guide is for newcomers joining the FIR repository at its current early stage.
+Welcome! This guide explains what FIR looks like today, how to contribute safely, and what to learn next.
 
-## 1) Repository overview
+## 1) Reality check: current state
 
-The repository is intentionally minimal right now. There is no application logic yet, which means:
+FIR is at a **seed stage**. There is currently:
 
-- no domain model yet
-- no API or UI implementation yet
-- no test harness yet
-- no build/deploy pipeline yet
+- no production application code
+- no test suite
+- no CI pipeline
+- no established architecture
 
-Think of this as a **project seed** rather than an existing application.
+This is intentional. The immediate goal is to set strong foundations.
 
-## 2) General structure (today)
+## 2) Current structure and intent
 
-Today the practical structure is:
+Current structure is documentation-first:
 
-- repository root files (currently minimal)
-- Git history/branch metadata
-- onboarding docs you are reading now
+- `README.md`: quick orientation and initial priorities
+- `docs/ONBOARDING.md`: this deeper guide
 
-As code is added, the expected direction is:
+Intent for near-term evolution:
 
-- `src/` for application code
-- `tests/` for unit/integration tests
-- `docs/` for architecture and process documentation
+- `src/` for implementation code
+- `tests/` for unit/integration coverage
+- `docs/architecture.md` for decision records and system design
+- `CONTRIBUTING.md` for contribution standards
 
-## 3) Important things to know before contributing
+## 3) Important principles for early contributors
 
-### A. Establish conventions early
+### Principle A — Optimize for clarity over cleverness
 
-Before adding large features, agree on:
+At this stage, predictable code and obvious folder boundaries matter more than abstraction.
 
-- language/runtime version policy
-- formatting/linting rules
-- test strategy and coverage expectations
-- branching and PR conventions
+### Principle B — Set conventions before scaling features
 
-### B. Keep the first implementation simple
+Agree on these items early:
 
-When creating the initial feature set:
+- supported runtime/toolchain versions
+- formatting and linting tools
+- minimal test expectations
+- branch + PR practices
 
-- favor readability over abstraction
-- keep module boundaries obvious
-- avoid overengineering until real constraints appear
+### Principle C — Leave decision breadcrumbs
 
-### C. Document decisions as you go
+Whenever a major decision is made (stack, structure, testing approach), record it in docs so the next contributor understands the rationale.
 
-As soon as you pick tooling or architecture, write it down in `docs/architecture.md`.
+## 4) Practical “what should I do first?” path
 
-A short record of why decisions were made is invaluable for future onboarding.
+Follow this sequence:
 
-## 4) Recommended “learn next” sequence
+1. **Read all docs in repo root and `docs/`**
+2. **Add missing project essentials** (`.gitignore`, language config, formatter/linter config)
+3. **Scaffold minimal code and tests** (`src/`, `tests/`)
+4. **Implement one tiny end-to-end slice**
+5. **Automate checks with CI**
+6. **Document run/test/contribution commands**
 
-If you are a newcomer deciding what to learn first, follow this order:
+## 5) Definition of a good early PR in FIR
 
-1. **Project purpose and scope**
-   - What problem FIR solves and what it does not solve.
-2. **Local development workflow**
-   - How to run the app (once created), run tests, and lint.
-3. **Code layout and module ownership**
-   - Which folders own which responsibilities.
-4. **Testing strategy**
-   - What is unit tested vs integration tested.
-5. **Release/deployment workflow**
-   - How code moves from branch to production.
+A strong early PR should be:
 
-## 5) Suggested immediate next tasks
+- small enough for fast review
+- explicit about goals and tradeoffs
+- accompanied by docs updates
+- validated by at least one reproducible local check
 
-1. Add `.gitignore` and language-specific tooling configuration.
-2. Add `CONTRIBUTING.md` with coding/PR standards.
-3. Add a minimal `src/` and `tests/` skeleton.
-4. Add CI that at least runs lint + test.
-5. Add `docs/architecture.md` with an initial system sketch.
+## 6) Suggested learning roadmap for newcomers
 
-## 6) Definition of “good first contribution” in this repo
+If you're joining the project now, learn in this order:
 
-A high-quality early contribution should:
-
-- be small and easy to review
-- include documentation updates
-- include or enable tests
-- avoid introducing unnecessary complexity
+1. **Problem scope** — what FIR is intended to solve
+2. **Development workflow** — how to run, test, and lint locally
+3. **Code organization** — where responsibilities live
+4. **Quality model** — what “done” means for tests and reviews
+5. **Delivery model** — how changes are validated and released
 
 ---
 
-If you are the next person building FIR, your biggest leverage is creating a clear, repeatable development foundation.
+At this stage, your highest leverage is creating a stable foundation that future contributors can follow without guesswork.
