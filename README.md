@@ -1,51 +1,41 @@
 # FIR
 
-FIR is currently a **bootstrap repository**: it has Git history and onboarding docs, but no application source code yet.
+FIR is a seed-stage repository with a **minimal runnable web app** and onboarding documentation for new contributors.
 
-This README is the fast path for new contributors.
+## What is in this repository now
 
-## Current repository shape
+- `app/`: tiny static app you can run locally right away
+- `docs/ONBOARDING.md`: newcomer orientation and next-step guidance
+- `README.md`: quick start and structure overview
 
-Today, the repository intentionally contains only foundational documentation:
+## Run the app
 
-- `README.md` (this file)
-- `docs/ONBOARDING.md` (deeper contributor onboarding)
+From repository root:
 
-No `src/`, `tests/`, or CI workflow has been introduced yet.
-
-## What this means for newcomers
-
-- You are not inheriting a legacy architecture yet.
-- Your early contributions will define project conventions.
-- Documentation and guardrails should come before large feature work.
-
-## Recommended first contributions (in order)
-
-1. **Pick the implementation stack**
-   - Language/runtime and version policy.
-2. **Create a minimal runnable slice**
-   - A tiny feature proving local run + test loop.
-3. **Establish quality guardrails**
-   - Formatter, linter, and baseline test command.
-4. **Add CI for the baseline checks**
-   - Run formatting/lint/tests on each PR.
-5. **Document contribution workflow**
-   - Add `CONTRIBUTING.md` and architecture notes.
-
-## Suggested target layout
-
-```text
-FIR/
-├── README.md
-├── CONTRIBUTING.md
-├── docs/
-│   ├── ONBOARDING.md
-│   └── architecture.md
-├── src/
-├── tests/
-└── <tooling and CI config>
+```bash
+python3 -m http.server 8000
 ```
 
-## Next read
+Then open:
 
-Continue with the full onboarding guide: **[`docs/ONBOARDING.md`](docs/ONBOARDING.md)**.
+- `http://localhost:8000/app/`
+
+## Why this app exists
+
+This app is intentionally small. It gives contributors:
+
+1. a known-good local run loop
+2. a concrete place to make first improvements
+3. a baseline before adding stack-specific tooling
+
+## Suggested next steps
+
+1. Decide long-term stack/runtime.
+2. Add linting + formatting.
+3. Add test harness and CI checks.
+4. Expand app structure (`src/`, `tests/`) based on chosen stack.
+5. Document contribution standards in `CONTRIBUTING.md`.
+
+## Learn more
+
+See [`docs/ONBOARDING.md`](docs/ONBOARDING.md) for the full newcomer guide.
